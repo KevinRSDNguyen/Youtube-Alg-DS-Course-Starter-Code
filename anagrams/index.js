@@ -8,7 +8,14 @@
 //   anagrams('Heart!', 'EARTH') --> True
 //   anagrams('lol', 'lolc') --> False
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+  let one = stringA.toLowerCase().trim().replaceAll(/[\W_]/g,'').split("").sort().join("")
+  let two = stringB.toLowerCase().trim().replaceAll(/[\W_]/g,'').split("").sort().join("")
+
+  return  one === two
+  }
+
+//(/[\W_]/g,'') MEANS THAT "NON WORD". This is opposed to \w that will match words.
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
